@@ -21,7 +21,7 @@ function preload(){
                 g=random(255);
                 b=random(255);
                 for(var i=0;i<objects.length;i++){
-                   document.getElementById("status").innerHTML="Status: Objects Detected";
+                   document.getElementById("status_object").innerHTML="Status: Objects Detected";
                    fill("red");
                    percentage=floor(objects[i].confidence *100);
                    text(objects[i].label+" "+percentage+"%",objects[i].x+15,objects[i].y+15);
@@ -42,7 +42,7 @@ function preload(){
             object_detector.detect(img,gotresult);
             }
             
-            function gotResult(error,results){
+            function gotresult(error,results){
                 if(error){
                     console.log(error);
                 }
